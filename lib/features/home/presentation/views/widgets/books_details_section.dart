@@ -13,7 +13,7 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * .2),
-          child: CustomBookImage(),
+          child: CustomBookImage(imageUrl: 'https://marloesdevries.com/wp-content/uploads/2022/05/greatescapewoodlandsnursinghome.jpg',),
         ),
         const SizedBox(height: 43),
         Text('The Jungle Book', style: Styles.textStyle30),

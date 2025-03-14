@@ -12,7 +12,7 @@ class SimilarBooksListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.symmetric(horizontal: 5.0),
-          child: const CustomBookImage(),
+          child: const CustomBookImage(imageUrl: 'https://marloesdevries.com/wp-content/uploads/2022/05/greatescapewoodlandsnursinghome.jpg',),
         ),
       ),
     );
