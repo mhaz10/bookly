@@ -11,10 +11,10 @@ class VolumeInfo {
   final String? description;
   final List<IndustryIdentifier>? industryIdentifiers;
   final ReadingModes? readingModes;
-  final int? pageCount;
+  final dynamic pageCount;
   final String? printType;
   final List<String>? categories;
-  final double? averageRating;
+  final dynamic averageRating;
   final int? ratingsCount;
   final String? maturityRating;
   final bool? allowAnonLogging;
