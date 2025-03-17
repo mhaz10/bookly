@@ -19,7 +19,7 @@ class BookListViewItem extends StatelessWidget {
         GoRouter.of(context).push(AppRouter.kBookDetailsView, extra: book);
       },
       child: SizedBox(
-        height: 130,
+        height: MediaQuery.of(context).size.width * .34,
         child: Row(
           children: [
             CustomBookImage(imageUrl: book.volumeInfo.imageLinks!.thumbnail,),
@@ -37,14 +37,16 @@ class BookListViewItem extends StatelessWidget {
                   const SizedBox(height: 3),
                   Text(book.volumeInfo.authors![0], style: Styles.textStyle14),
                   const SizedBox(height: 3),
-                  Row(
-                    children: [
-                      Text('Free', style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold)),
-                      Spacer(),
-                      BookRating(
-                        rating: book.volumeInfo.averageRating ?? 0,
-                        count:  book.volumeInfo.ratingsCount ?? 0,)
-                    ],
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Text('Free', style: Styles.textStyle18.copyWith(fontWeight: FontWeight.bold)),
+                        Spacer(),
+                        BookRating(
+                          rating: book.volumeInfo.averageRating ?? 0,
+                          count:  book.volumeInfo.ratingsCount ?? 0,)
+                      ],
+                    ),
                   )
                 ],
               ),
